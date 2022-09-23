@@ -21,6 +21,8 @@ def pregunta_01():
     214
 
     """
+    X=open("./data.csv","r").readlines()
+    
     return
 
 
