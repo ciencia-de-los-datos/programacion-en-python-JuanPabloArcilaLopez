@@ -43,7 +43,14 @@ def pregunta_02():
     ]
 
     """
-    return
+    
+for y in x:
+    column1=[x[0]]
+    listatuple=counter(column1)
+    for k,v in dict.items(listatuple):
+        listatuple=[(k,v)]
+        listatuple.sort()
+return
 
 
 def pregunta_03():
