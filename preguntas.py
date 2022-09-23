@@ -22,7 +22,7 @@ def pregunta_01():
 
     """
     x=open("./data.csv","r").readlines()
-    x=[z.replace("\n",""] for z in x
+    x=[z.replace("\n","") for z in x]            
     x=[z.split("\t"] for z in x
     column2=[int(x[1]) for x in x]
     listsum=sum(column2)
