@@ -43,7 +43,7 @@ def pregunta_02():
     ]
 
     """
-    
+    x=open("./data.csv","r").readlines()
     for y in x:
         column1=[x[0]]
         listatuple=counter(column1)
