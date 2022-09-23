@@ -90,14 +90,12 @@ def pregunta_04():
     ]
 
     """
-    with open('data.csv', 'r') as f:
-    lines = f.readlines()
+    x=open("./data.csv","r").readlines():
+    lines = x.readlines()
     rows = [line.split('\t') for line in lines]
     col3 = [c[2] for c in rows]
     months = [k.split('-')[1] for k in col3]
     listatuple =[tuple([i,str(months.count(i))])for i in sorted (set(months))]
-    """for i in sorted(set(months)):
-        print(i+','+str(months.count(i)))"""
     return listatuple
 
 
