@@ -44,10 +44,10 @@ def pregunta_02():
 
     """
     x=open("./data.csv","r").readlines()
-    for y in x:
-        column1=[y[0]]
-        for y in set(column1):
-            listatuple=[tuple([y,column1.count(y)])
+    for x in x:
+        column1=[x[0]]
+        for x in set(column1):
+            listatuple=[tuple([x,column1.count(x)])
             listatuple.sort()
     return listatuple
 
