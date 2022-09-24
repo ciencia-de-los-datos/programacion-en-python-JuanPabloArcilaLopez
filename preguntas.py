@@ -68,7 +68,22 @@ def pregunta_03():
     ]
 
     """
-    return
+    x=open("./data.csv","r").readlines()
+    with open('data.csv', 'r') as f:
+        lines = f.readlines()
+        rows = [line.split('\t') for line in lines]
+        print (rows)
+        x = [c[0:2] for c in rows]
+        print (x)
+        d = {}
+        for i in x:
+            if i[0] not in d.keys():
+                d[i[0]] = int(i[1])
+            else:
+                d[i[0]] = d[i[0]] + int(i[1])
+    list = [(k, v) for k, v in d.items()]
+    list.sort()
+    return list.sort
 
 
 def pregunta_04():
