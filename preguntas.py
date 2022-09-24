@@ -26,7 +26,10 @@ def pregunta_01():
     x=[z.split("\t") for z in x]
     column2=[int(x[1]) for x in x]
     listsum=sum(column2)
+    print (listsum)
     return listsum
+
+
 
 def pregunta_02():
     """
@@ -90,13 +93,6 @@ def pregunta_04():
     ]
 
     """
-    x=open("./data.csv","r").readlines():
-    lines = x.readlines()
-    rows = [line.split('\t') for line in lines]
-    col3 = [c[2] for c in rows]
-    months = [k.split('-')[1] for k in col3]
-    listatuple =[tuple([i,str(months.count(i))])for i in sorted (set(months))]
-    return listatuple
 
 
 def pregunta_05():
@@ -114,19 +110,6 @@ def pregunta_05():
     ]
 
     """
-    with open('data.csv', 'r') as f:
-    lines = f.readlines()
-    rows = [line.split('\t') for line in lines]
-    x = [c[0:2] for c in rows]
-    d = {}
-    for i in x:
-        if i[0] not in d.keys():
-            d[i[0]] = [int(i[1])]
-        else:
-            d[i[0]].append(int(i[1]))
-
-    for i in sorted(d.keys()):
-        print(i+','+str(max(d[i]))+','+str(min(d[i])))
     return 
 
 
