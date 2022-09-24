@@ -139,7 +139,7 @@ def pregunta_05():
                 d[i[0]] = [int(i[1])]
             else:
                 d[i[0]].append(int(i[1]))
-    listatuple=[tuple([i,max(d[i]),min(d[i])]) for i in d.keys()]
+    listatuple=[tuple([i,max(d[i]),min(d[i])]) for i in sorted(d.keys())]
     return listatuple
 
 
@@ -217,7 +217,7 @@ def pregunta_07():
                 d[i[1]] = [i[0]]
             else:
                 d[i[1]].append(i[0])
-    listatuple=[tuple([k,d[k]]) for k in sorted(d.keys())]
+    listatuple=[tuple([int(k),d[k]]) for k in sorted(d.keys())]
     return listatuple
 
 
@@ -253,7 +253,7 @@ def pregunta_08():
                 d[i[1]] = [i[0]]
             else:
                 d[i[1]].append(i[0])
-    listatuple=[tuple([k,sorted(set(d[k]))]) for k in sorted(d.keys())]
+    listatuple=[tuple([int(k),sorted(set(d[k]))]) for k in sorted(d.keys())]
     return listatuple
 
 
